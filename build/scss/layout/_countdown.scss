@@ -1,0 +1,54 @@
+body {
+  height: 100vh;
+  width: 100vw;
+
+  position: relative;
+
+  // BACKGROUND IMAGES
+  background-color: var(--color-secondary-very-dark-blue);
+  background-image: url("/img/pattern-hills.svg"), url("/img/bg-stars.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 2.4rem;
+  text-align: center;
+  max-width: 65.8rem;
+}
+
+.header {
+  margin-top: 10rem;
+}
+
+.countdown {
+  margin-top: 10rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 8rem;
+  left: 50%;
+  right: 50%;
+
+  .social__icons {
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+  }
+
+  .social__icon {
+    fill: var(--color-primary-gray-blue);
+    transition: all 0.2s ease-in-out;
+    width: 2.4rem;
+    height: 2.4rem;
+
+    transition: all 0.2s;
+  }
+
+  a:hover .social__icon {
+    fill: var(--color-primary-soft-red);
+  }
+}

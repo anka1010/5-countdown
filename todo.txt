@@ -1,0 +1,7 @@
+TODO ** check html & css
+
+TODO ** all animations on hover / active etc.
+
+TODO ** fix flip-down
+
+TODO ** mobile

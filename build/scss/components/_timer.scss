@@ -1,0 +1,77 @@
+// TIMER COMPONENT FOR COUNTDOWN
+.countdown__timer {
+  // display: flex;
+  // column-gap: 3rem;
+  // justify-content: center;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .countdown__time {
+    position: relative;
+    background-color: var(--color-secondary-dark-blue);
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 0 var(--color-secondary-almost-black-blue);
+
+    width: 14rem;
+    line-height: 14rem;
+
+    margin-bottom: 3rem;
+
+    &__dots--left {
+      @include dot;
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    &__dots--right {
+      @include dot;
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+
+    &__text {
+      &-new,
+      &-flipper--front,
+      &-flipper--back {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 50%;
+        right: 0;
+        border-radius: 0.5rem;
+        background-color: var(--color-secondary-dark-blue);
+
+        border-bottom: 1px solid var(--color-secondary-dark-blue);
+        background-color: var(--color-secondary-dark-blue);
+        filter: brightness(80%);
+      }
+
+      &-flipper--front,
+      &-flipper--back {
+        backface-visibility: hidden;
+      }
+
+      &-flipper--front {
+        filter: brightness(80%);
+        transform: rotateX(180deg);
+      }
+    }
+  }
+}
+
+// FLIP DOWN
+.flipdown-front {
+  //  -webkit-animation: swing-top-fwd 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  //    reverse;
+  animation: flip-down-top-middle 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    infinite reverse;
+}
+
+.flipdown-back {
+  //  -webkit-animation: swing-top-fwd 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  //    reverse;
+  animation: flip-down-middle-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    0.5s infinite reverse;
+}
