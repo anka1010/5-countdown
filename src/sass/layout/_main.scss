@@ -2,14 +2,15 @@ body {
   height: 100vh;
   width: 100vw;
 
-  position: relative;
-
   // BACKGROUND IMAGES
   background-color: var(--color-secondary-very-dark-blue);
   background-image: url("/img/pattern-hills.svg"), url("/img/bg-stars.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position-y: bottom;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
@@ -28,27 +29,6 @@ body {
 }
 
 .footer {
-  position: absolute;
-  bottom: 8rem;
-  left: 50%;
-  right: 50%;
-
-  .social__icons {
-    display: flex;
-    justify-content: center;
-    column-gap: 3rem;
-  }
-
-  .social__icon {
-    fill: var(--color-primary-gray-blue);
-    transition: all 0.2s ease-in-out;
-    width: 2.4rem;
-    height: 2.4rem;
-
-    transition: all 0.2s;
-  }
-
-  a:hover .social__icon {
-    fill: var(--color-primary-soft-red);
-  }
+  margin-top: auto;
+  margin-bottom: 8rem;
 }

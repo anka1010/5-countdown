@@ -1,2 +1,5 @@
 _starter/
 node_modules/
+public/
+
+package-copy.json
